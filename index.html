@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="./assets/images/favicon.ico" />
+  <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+  <meta name="theme-color" content="#000000" />
+  <meta
+    name="description"
+    content="Generate strong password"
+  />
+  <meta property="og:url" content="https://iftee.github.io/js-password-generator/"/>
+  <meta property="og:title" content="Password Generator"/>
+  <meta property="og:description" content="Generate strong password"/>
+  <meta property="og:image" content="https://repository-images.githubusercontent.com/297821718/4f318a80-fd71-11ea-8bec-ef3e8934df67"/>
+  <link rel="apple-touch-icon" href="./assets/images/logo192.png" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+  <div class="password-container">
+    <div class="password-header">
+      <h1>Generate Password</h1>
+    </div>
+    <div class="password-body">
+      <div class="form-control">
+        <textarea id="password" rows="1" readonly placeholder="Click on GENERATE"></textarea>
+        <div class="copy-confirm" id="copyConfirm">Password copied!</div>
+      </div>
+      <div class="form-control">
+        <label for="passwordLength">Password Length: <span id="passwordLengthValue">15</span></label>
+        <input type="range" class="custom-range" id="passwordLength" value="15" min="15" max="32">
+      </div>
+      <div class="form-control custom-switch">        
+        <input type="checkbox" id="characterUppercase" checked />
+        <label for="characterUppercase">Include Uppercase Letters</label>
+      </div>
+      <div class="form-control custom-switch">
+        <input type="checkbox" id="characterLowercase" checked />
+        <label for="characterLowercase">Include Lowercase Letters</label>
+      </div>
+      <div class="form-control custom-switch">        
+        <input type="checkbox" id="characterNumber" checked />
+        <label for="characterNumber">Include Numbers</label>
+      </div>
+      <div class="form-control custom-switch">        
+        <input type="checkbox" id="characterSymbol" />
+        <label for="characterSymbol">Include Symbols</label>
+      </div>
+    </div>
+    <div class="password-footer">
+      <button id="generatePassword">Generate</button>
+      <button id="copyPassword">Copy</button>
+    </div>
+  </div>
+  
+  <script src="./assets/js/script.js" defer></script>
+</body>
+</html>
