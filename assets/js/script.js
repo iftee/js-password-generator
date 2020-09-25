@@ -1,13 +1,13 @@
-const passwordElement = document.getElementById('password');
-const passwordLengthElement = document.getElementById('passwordLength');
-const passwordLengthValueElement = document.getElementById('passwordLengthValue');
-const characterUppercaseElement = document.getElementById('characterUppercase');
-const characterLowercaseElement = document.getElementById('characterLowercase');
-const characterNumberElement = document.getElementById('characterNumber');
-const characterSymbolElement = document.getElementById('characterSymbol');
-const generatePasswordElement = document.getElementById('generatePassword');
-const copyPasswordElement = document.getElementById('copyPassword');copyConfirm
-const copyConfirmElement = document.getElementById('copyConfirm');
+const passwordElement = document.querySelector('#password');
+const passwordLengthElement = document.querySelector('#passwordLength');
+const passwordLengthValueElement = document.querySelector('#passwordLengthValue');
+const characterUppercaseElement = document.querySelector('#characterUppercase');
+const characterLowercaseElement = document.querySelector('#characterLowercase');
+const characterNumberElement = document.querySelector('#characterNumber');
+const characterSymbolElement = document.querySelector('#characterSymbol');
+const generatePasswordElement = document.querySelector('#generatePassword');
+const copyPasswordElement = document.querySelector('#copyPassword');
+const copyConfirmElement = document.querySelector('#copyConfirm');
 
 const uppercaseLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const lowercaseLetters = 'abcdefghijklmnopqrstuvwxyz';
@@ -94,8 +94,8 @@ const copyPassword = () => {
   copyConfirmElement.classList.add('show');
   setTimeout(
     () => {
-      window.getSelection().removeAllRanges();
-      copyConfirmElement.classList.remove('show');
+      copyConfirmElement.classList.remove('show');      
+      passwordElement.selectionEnd = passwordElement.selectionStart;
     },
     2000
   );  
